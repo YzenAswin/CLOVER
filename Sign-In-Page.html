@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In - Clover Clothiers</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4F7942',secondary:'#8A9A5B'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9fafb;
+}
+input:focus {
+    outline: none;
+}
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.custom-checkbox.checked {
+    background-color: #4F7942;
+    border-color: #4F7942;
+}
+.custom-checkbox.checked:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href=" data-readdy="true" class="flex items-center text-gray-700 hover:text-primary transition">
+                <div class="w-8 h-8 flex items-center justify-center mr-2">
+                    <i class="ri-arrow-left-line ri-lg"></i>
+                </div>
+                <span>Back to Home</span>
+            </a>
+            <a href="Homepage.html" data-readdy="true" class="text-3xl font-['Pacifico'] text-primary">logo</a>
+            <div class="w-8 h-8"></div> <!-- Empty div for balanced layout -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-12 px-4">
+        <div class="w-full max-w-md">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h1 class="text-2xl font-bold text-gray-900 mb-6 text-center">Sign In</h1>
+                
+                <form>
+                    <div class="space-y-5">
+                        <!-- Email/Username Field -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email or Username</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="ri-mail-line text-gray-400"></i>
+                                </div>
+                                <input type="email" id="email" name="email" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-button text-gray-900 focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Enter your email or username">
+                            </div>
+                        </div>
+                        
+                        <!-- Password Field -->
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                                <a href="#" class="text-sm font-medium text-primary hover:text-primary/80 transition">Forgot password?</a>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="ri-lock-line text-gray-400"></i>
+                                </div>
+                                <input type="password" id="password" name="password" class="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-button text-gray-900 focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Enter your password">
+                                <button type="button" id="toggle-password" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                    <i class="ri-eye-off-line text-gray-400" id="password-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Remember Me Checkbox -->
+                        <div class="flex items-center">
+                            <div class="custom-checkbox" id="remember-checkbox"></div>
+                            <label for="remember" class="ml-2 block text-sm text-gray-700 cursor-pointer">Remember me</label>
+                            <input type="checkbox" id="remember" name="remember" class="hidden">
+                        </div>
+                        
+                        <!-- Sign In Button -->
+                        <button type="submit" class="w-full bg-primary text-white py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Sign In</button>
+                    </div>
+                </form>
+                
+                <!-- Divider -->
+                <div class="relative my-6">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-200"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="px-4 bg-white text-sm text-gray-500">or</span>
+                    </div>
+                </div>
+                
+                <!-- Social Sign In -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <button class="flex items-center justify-center py-2.5 px-4 border border-gray-300 rounded-button hover:bg-gray-50 transition">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-google-fill text-[#DB4437]"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700 whitespace-nowrap">Google</span>
+                    </button>
+                    <button class="flex items-center justify-center py-2.5 px-4 border border-gray-300 rounded-button hover:bg-gray-50 transition">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-facebook-fill text-[#4267B2]"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-700 whitespace-nowrap">Facebook</span>
+                    </button>
+                </div>
+                
+                <!-- Register Link -->
+                <div class="text-center">
+                    <p class="text-sm text-gray-600">
+                        New to Clover Clothiers? 
+                        <a href="#" class="font-medium text-primary hover:text-primary/80 transition">Create Account</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Security Note -->
+            <div class="mt-6 text-center">
+                <div class="flex items-center justify-center mb-2">
+                    <div class="w-4 h-4 flex items-center justify-center mr-1.5">
+                        <i class="ri-shield-check-line text-primary"></i>
+                    </div>
+                    <span class="text-xs font-medium text-gray-700">Secure Sign-In</span>
+                </div>
+                <p class="text-xs text-gray-500">Your information is protected with industry-standard encryption</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-500 mb-4 md:mb-0">&copy; 2025 Clover Clothiers. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-sm text-gray-500 hover:text-primary transition">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-primary transition">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-primary transition">Help Center</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="form-functionality">
+    document.addEventListener('DOMContentLoaded', function() {
+        // Password visibility toggle
+        const togglePassword = document.getElementById('toggle-password');
+        const passwordInput = document.getElementById('password');
+        const passwordIcon = document.getElementById('password-icon');
+        
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            if (type === 'text') {
+                passwordIcon.classList.remove('ri-eye-off-line');
+                passwordIcon.classList.add('ri-eye-line');
+            } else {
+                passwordIcon.classList.remove('ri-eye-line');
+                passwordIcon.classList.add('ri-eye-off-line');
+            }
+        });
+        
+        // Custom checkbox functionality
+        const checkbox = document.getElementById('remember-checkbox');
+        const hiddenCheckbox = document.getElementById('remember');
+        
+        checkbox.addEventListener('click', function() {
+            this.classList.toggle('checked');
+            hiddenCheckbox.checked = this.classList.contains('checked');
+        });
+        
+        // Form validation
+        const form = document.querySelector('form');
+        const emailInput = document.getElementById('email');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Simple email validation
+            if (!emailInput.value.trim()) {
+                showError(emailInput, 'Email is required');
+                isValid = false;
+            } else {
+                removeError(emailInput);
+            }
+            
+            // Simple password validation
+            if (!passwordInput.value.trim()) {
+                showError(passwordInput, 'Password is required');
+                isValid = false;
+            } else {
+                removeError(passwordInput);
+            }
+            
+            if (isValid) {
+                // Form would submit here in a real application
+                showSuccess();
+            }
+        });
+        
+        function showError(input, message) {
+            const parent = input.parentElement.parentElement;
+            let errorElement = parent.querySelector('.error-message');
+            
+            if (!errorElement) {
+                errorElement = document.createElement('p');
+                errorElement.className = 'error-message text-red-500 text-xs mt-1';
+                parent.appendChild(errorElement);
+            }
+            
+            errorElement.textContent = message;
+            input.classList.add('border-red-500');
+        }
+        
+        function removeError(input) {
+            const parent = input.parentElement.parentElement;
+            const errorElement = parent.querySelector('.error-message');
+            
+            if (errorElement) {
+                errorElement.remove();
+            }
+            
+            input.classList.remove('border-red-500');
+        }
+        
+        function showSuccess() {
+            // In a real application, this would redirect to the dashboard or home page
+            console.log('Form submitted successfully');
+            
+            // For demo purposes, we'll just show a success message
+            const formContainer = form.parentElement;
+            formContainer.innerHTML = `
+                <div class="text-center py-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-check-line text-green-500 ri-2x"></i>
+                    </div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Sign In Successful</h2>
+                    <p class="text-gray-600 mb-6">You are now being redirected to your account.</p>
+                    <a href="" data-readdy="true" class="inline-block bg-primary text-white px-6 py-2 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Go to Homepage</a>
+                </div>
+            `;
+        }
+    });
+    </script>
+</body>
+</html>

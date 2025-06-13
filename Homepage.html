@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clover Clothiers - Premium T-Shirts</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4F7942',secondary:'#8A9A5B'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=Premium%20minimalist%20t-shirt%20fashion%20photography%20with%20models%20wearing%20high-quality%20t-shirts%20against%20a%20clean%2C%20light%20background.%20The%20left%20side%20has%20a%20gradient%20to%20white%20for%20text%20placement.%20Professional%20lifestyle%20fashion%20shoot%20with%20soft%20natural%20lighting%2C%20showing%20diverse%20models%20in%20elegant%20poses%20wearing%20simple%2C%20luxurious%20t-shirts.&width=1920&height=800&seq=1&orientation=landscape');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+input:focus {
+outline: none;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #e5e7eb;
+border-radius: 4px;
+cursor: pointer;
+}
+.custom-checkbox.checked {
+background-color: #4F7942;
+border-color: #4F7942;
+}
+.custom-checkbox.checked:after {
+content: '';
+position: absolute;
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e5e7eb;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #4F7942;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+.product-card:hover .quick-view {
+opacity: 1;
+}
+.testimonial-container {
+transition: transform 0.3s ease;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header/Navigation -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="Homepage.html"<img src="" alt="Description of the image"></a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="Homepage.html" class="text-gray-800 hover:text-primary font-medium transition">Home</a>
+<a href="#" class="text-gray-800 hover:text-primary font-medium transition">Shop</a>
+<a href="#" class="text-gray-800 hover:text-primary font-medium transition">Collections</a>
+<a href="About-us.html" class="text-gray-800 hover:text-primary font-medium transition">About</a>
+<a href="contact-page.html" class="text-gray-800 hover:text-primary font-medium transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="relative">
+<button id="search-toggle" class="w-10 h-10 flex items-center justify-center hover:text-primary transition">
+<i class="ri-search-line text-gray-700 ri-lg"></i>
+</button>
+<div id="search-dropdown" class="hidden absolute right-0 top-full mt-2 w-72 bg-white rounded-lg shadow-lg p-4 z-50">
+<div class="relative">
+<input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-button text-sm">
+<i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+</div>
+</div>
+</div>
+<div class="relative">
+<button id="profile-toggle" class="w-10 h-10 flex items-center justify-center hover:text-primary transition">
+<i class="ri-user-line text-gray-700 ri-lg"></i>
+</button>
+<div id="profile-dropdown" class="hidden absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+<a href="Sign-In-Page.html" data-readdy="true" class="block px-4u py-2 text-gray-700 hover:bg-gray-50">Sign In</a>
+<a href="sign-up-page.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Register</a>
+<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">My Orders</a>
+<a href="setting.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Settings</a>
+</div>
+</div>
+<div class="relative">
+<button id="cart-toggle" class="w-10 h-10 flex items-center justify-center hover:text-primary transition">
+<i class="ri-shopping-bag-line text-gray-700 ri-lg"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">2</span>
+</button>
+<div id="cart-dropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg p-4 z-50">
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<img src="https://readdy.ai/api/search-image?query=Premium%20white%20t-shirt%20on%20minimalist%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high-quality%20fabric%20visible%2C%20clean%20and%20simple%20presentation%2C%20fashion%20product%20shot%20on%20light%20background&width=80&height=80&seq=10&orientation=squarish" alt="White T-Shirt" class="w-16 h-16 object-cover rounded">
+<div class="flex-1">
+<h4 class="text-sm font-medium text-gray-900">Classic White Tee</h4>
+<p class="text-sm text-gray-500">Size: M × 1</p>
+<p class="text-sm font-medium text-gray-900">NPR 560.00</p>
+</div>
+<button class="text-gray-400 hover:text-red-500 delete-cart-item">
+<i class="ri-delete-bin-line"></i>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<img src="https://readdy.ai/api/search-image?query=Premium%20black%20t-shirt%20on%20minimalist%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high-quality%20fabric%20visible%2C%20clean%20and%20simple%20presentation%2C%20fashion%20product%20shot%20on%20light%20background&width=80&height=80&seq=11&orientation=squarish" alt="Black T-Shirt" class="w-16 h-16 object-cover rounded">
+<div class="flex-1">
+<h4 class="text-sm font-medium text-gray-900">Essential Black Tee</h4>
+<p class="text-sm text-gray-500">Size: L × 1</p>
+<p class="text-sm font-medium text-gray-900">NPR 590.00</p>
+</div>
+<button class="text-gray-400 hover:text-red-500 delete-cart-item">
+<i class="ri-delete-bin-line"></i>
+</button>
+</div>
+<div class="border-t border-gray-200 pt-4 mt-4">
+<div class="flex justify-between text-sm font-medium text-gray-900 mb-4">
+<span>Subtotal</span>
+<span>NPR 1,150.00</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<a href="#" class="text-center px-4 py-2 border border-gray-300 rounded-button text-sm font-medium text-gray-700 hover:bg-gray-50">View Cart</a>
+<a href="#" class="text-center px-4 py-2 bg-primary text-white rounded-button text-sm font-medium hover:bg-primary/90">Checkout</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-gray-700 ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full h-[600px] mt-16 relative">
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+<div class="container mx-auto px-4 h-full flex items-center">
+<div class="w-full md:w-1/2 z-10">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Premium Crafted T-Shirts</h1>
+<p class="text-lg text-gray-700 mb-8 max-w-md">Elevate your everyday style with our meticulously crafted t-shirts made from sustainable, premium fabrics.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Shop Now</button>
+<button class="bg-white border border-gray-300 text-gray-800 px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-gray-50 transition">View Collections</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Showcase -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Bestselling T-Shirts</h2>
+<p class="text-gray-600 max-w-xl mx-auto">Discover our most loved designs crafted with premium materials for ultimate comfort and style</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Product 1 -->
+<div class="bg-white rounded shadow-sm overflow-hidden product-card group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Premium%20white%20t-shirt%20on%20minimalist%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high-quality%20fabric%20visible%2C%20clean%20and%20simple%20presentation%2C%20fashion%20product%20shot%20on%20light%20background&width=500&height=600&seq=2&orientation=portrait" alt="Classic White T-Shirt" class="w-full h-80 object-cover object-top">
+<div class="quick-view opacity-0 absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity">
+<button class="quick-view-btn bg-white text-gray-900 px-4 py-2 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition">Quick View</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-medium text-gray-900">Classic White Tee</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="text-gray-900 font-semibold">NPR 560.00</span>
+<div class="flex items-center gap-1">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+<span class="text-sm text-gray-500 ml-1">(42)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white rounded shadow-sm overflow-hidden product-card group">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=Premium%20black%20t-shirt%20on%20minimalist%20background%2C%20professional%20product%20photography%20with%20soft%20shadows%2C%20high-quality%20fabric%20visible%2C%20clean%20and%20simple%20presentation%2C%20fashion%20product%20shot%20on%20light%20background&width=500&height=600&seq=3&orientation=portrait" alt="Essential Black T-Shirt" class="w-full h-80 object-cover object-top">
+<div class="quick-view opacity-0 absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity">
+<button class="quick-view-btn bg-white text-gray-900 px-4 py-2 !rounded-button whitespace-nowrap font-medium hover:bg-gray-100 transition">Quick View</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-medium text-gray-900">Essential Black Tee</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="text-gray-900 font-semibold">NPR 590.00</span>
+<div class="flex items-center gap-1">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<span class="text-sm text-gray-500 ml-1">(56)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="bg-primary text-white px-8 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition">View All Collections</button>
+</div>
+</div>
+</section>
+<!-- Value Proposition -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Value 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-t-shirt-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Premium Fabric</h3>
+<p class="text-gray-600">100% organic cotton for ultimate comfort and durability</p>
+</div>
+<!-- Value 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-home-heart-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Local Craftsmanship</h3>
+<p class="text-gray-600">Ethically made by skilled artisans in our local workshop</p>
+</div>
+<!-- Value 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-secure-payment-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Secure Payment</h3>
+<p class="text-gray-600">Shop with confidence with our encrypted payment system</p>
+</div>
+<!-- Value 4 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-truck-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+<p class="text-gray-600">Free shipping on all orders with 2-3 day delivery</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">What Our Customers Say</h2>
+<p class="text-gray-600 max-w-xl mx-auto">Real experiences from our valued customers who love our premium t-shirts</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300">
+<div class="flex items-center gap-1 mb-4">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700 italic mb-6">"The quality of these t-shirts is exceptional! The fabric feels premium and the fit is perfect. I particularly love the white tee - it's become my go-to for both casual and semi-formal occasions."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Asian%20woman%20with%20modern%20style%2C%20natural%20makeup%2C%20business%20casual%20attire%2C%20confident%20smile%2C%20against%20a%20clean%20studio%20background&width=80&height=80&seq=12&orientation=squarish" alt="Sarah Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="text-gray-900 font-medium">Sarah Chen</h4>
+<p class="text-gray-500 text-sm">Verified Buyer</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300">
+<div class="flex items-center gap-1 mb-4">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700 italic mb-6">"I own both the black and white tees, and they're worth every rupee. The material is breathable, perfect for our climate, and the stitching quality is outstanding. Will definitely buy more!"</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20South%20Asian%20man%20with%20well-groomed%20beard%2C%20modern%20professional%20attire%2C%20warm%20genuine%20smile%2C%20against%20a%20clean%20studio%20background&width=80&height=80&seq=13&orientation=squarish" alt="Raj Sharma" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="text-gray-900 font-medium">Raj Sharma</h4>
+<p class="text-gray-500 text-sm">Verified Buyer</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-1 transition-transform duration-300">
+<div class="flex items-center gap-1 mb-4">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-700 italic mb-6">"The attention to detail in these t-shirts is remarkable. The black one has become my favorite - the color hasn't faded after multiple washes, and the fit remains perfect. Excellent value for money!"</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20woman%20with%20long%20black%20hair%2C%20natural%20makeup%2C%20contemporary%20professional%20style%2C%20genuine%20smile%2C%20against%20a%20clean%20studio%20background&width=80&height=80&seq=14&orientation=squarish" alt="Priya Patel" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="text-gray-900 font-medium">Priya Patel</h4>
+<p class="text-gray-500 text-sm">Verified Buyer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Arrows -->
+<button id="prev-testimonial" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10 focus:outline-none">
+<i class="ri-arrow-left-s-line text-gray-700"></i>
+</button>
+<button id="next-testimonial" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center z-10 focus:outline-none">
+<i class="ri-arrow-right-s-line text-gray-700"></i>
+</button>
+<!-- Dots -->
+<div class="flex justify-center mt-6 gap-2">
+<button class="testimonial-dot w-3 h-3 rounded-full bg-primary"></button>
+<button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300"></button>
+<button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="max-w-xl mx-auto text-center">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Join Our Community</h2>
+<p class="text-gray-600 mb-8">Subscribe to our newsletter for exclusive offers, style tips, and first access to new releases.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border border-gray-300 rounded-button focus:border-primary focus:ring-1 focus:ring-primary text-gray-700">
+<button class="bg-primary text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Subscribe</button>
+</div>
+<p class="text-gray-500 text-sm mt-4">By subscribing, you agree to our <a href="#" class="text-primary hover:underline">Privacy Policy</a>.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Column 1 -->
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 inline-block">logo</a>
+<p class="text-gray-600 mb-6">Premium t-shirts crafted with care using sustainable materials for everyday comfort and style.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary/10 transition">
+<i class="ri-facebook-fill text-gray-700"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary/10 transition">
+<i class="ri-instagram-line text-gray-700"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary/10 transition">
+<i class="ri-twitter-x-line text-gray-700"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary/10 transition">
+<i class="ri-pinterest-line text-gray-700"></i>
+</a>
+</div>
+</div>
+<!-- Column 2 -->
+<div>
+<h3 class="text-lg font-semibold text-gray-900 mb-6">Shop</h3>
+<ul class="space-y-3">
+<li><a href="coming-soon.html" class="text-gray-600 hover:text-primary transition">All Products</a></li>
+<li><a href="coming-soon.html" class="text-gray-600 hover:text-primary transition">Sale</a></li>
+</ul>
+</div>
+<!-- Column 3 -->
+<div>
+<h3 class="text-lg font-semibold text-gray-900 mb-6">About</h3>
+<ul class="space-y-3">
+<li><a href="About-us.html" class="text-gray-600 hover:text-primary transition">Our Story</a></li>
+<li><a href="About-us.html" class="text-gray-600 hover:text-primary transition">Blog</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary transition">Press</a></li>
+</ul>
+</div>
+<!-- Column 4 -->
+<div>
+<h3 class="text-lg font-semibold text-gray-900 mb-6">Customer Service</h3>
+<ul class="space-y-3">
+<li><a href="contact-page.html" class="text-gray-600 hover:text-primary transition">Contact Us</a></li>
+<li><a href="Homepage.html" class="text-gray-600 hover:text-primary transition">Shipping & Returns</a></li>
+<li><a href="Homepage.html" class="text-gray-600 hover:text-primary transition">FAQs</a></li>
+<li><a href="Homepage.html" class="text-gray-600 hover:text-primary transition">Size Guide</a></li>
+<li><a href="Homepage.html" class="text-gray-600 hover:text-primary transition">Track Order</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<p class="text-gray-500 text-sm">&copy; 2025 Clover Clothiers. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-visa-fill text-gray-700 ri-lg"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-mastercard-fill text-gray-700 ri-lg"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-paypal-fill text-gray-700 ri-lg"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-apple-fill text-gray-700 ri-lg"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-google-fill text-gray-700 ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Delete Confirmation Modal -->
+<div id="delete-confirmation-modal" class="fixed inset-0 z-[60] hidden">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+<div class="absolute inset-0 flex items-center justify-center p-4">
+<div class="bg-white rounded-lg w-full max-w-md p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Remove Item</h3>
+<p class="text-gray-600 mb-6">Are you sure you want to remove this item from your cart?</p>
+<div class="flex justify-end gap-3">
+<button id="cancel-delete" class="px-4 py-2 text-gray-700 bg-gray-100 !rounded-button hover:bg-gray-200 transition">Cancel</button>
+<button id="confirm-delete" class="px-4 py-2 text-white bg-red-500 !rounded-button hover:bg-red-600 transition">Remove Item</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating WhatsApp Button -->
+<a href="#" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full shadow-lg flex items-center justify-center z-50 hover:bg-green-600 transition">
+<i class="ri-whatsapp-line text-white ri-xl"></i>
+</a>
+<!-- Quick View Modal -->
+<div id="quick-view-modal" class="fixed inset-0 z-50 hidden">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+<div class="absolute inset-0 flex items-center justify-center p-4">
+<div class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto relative">
+<button id="close-modal" class="absolute right-4 top-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+<div class="space-y-4">
+<img id="modal-product-image" class="w-full aspect-square object-cover object-top rounded" src="" alt="Product Image">
+</div>
+<div>
+<h2 id="modal-product-title" class="text-2xl font-semibold text-gray-900 mb-2"></h2>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex items-center gap-1">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+<span class="text-sm text-gray-500">(42 reviews)</span>
+</div>
+<p id="modal-product-price" class="text-2xl font-semibold text-gray-900 mb-6"></p>
+<div class="space-y-6">
+<div>
+<h3 class="font-medium text-gray-900 mb-2">Select Size</h3>
+<div class="flex flex-wrap gap-2">
+<button class="size-btn px-4 py-2 border border-gray-300 rounded-button hover:border-primary hover:text-primary">S</button>
+<button class="size-btn px-4 py-2 border border-gray-300 rounded-button hover:border-primary hover:text-primary">M</button>
+<button class="size-btn px-4 py-2 border border-gray-300 rounded-button hover:border-primary hover:text-primary">L</button>
+<button class="size-btn px-4 py-2 border border-gray-300 rounded-button hover:border-primary hover:text-primary">XL</button>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-gray-900 mb-2">Select Color</h3>
+<div class="flex gap-2">
+<button class="color-btn w-8 h-8 rounded-full border-2 border-transparent hover:border-primary bg-white ring-1 ring-gray-200"></button>
+<button class="color-btn w-8 h-8 rounded-full border-2 border-transparent hover:border-primary bg-gray-900 ring-1 ring-gray-200"></button>
+<button class="color-btn w-8 h-8 rounded-full border-2 border-transparent hover:border-primary bg-blue-600 ring-1 ring-gray-200"></button>
+</div>
+</div>
+<div>
+<h3 class="font-medium text-gray-900 mb-2">Quantity</h3>
+<div class="flex items-center gap-2">
+<button id="decrease-quantity" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-button hover:border-primary hover:text-primary">-</button>
+<input type="text" id="quantity" value="1" class="w-16 text-center border-none" readonly>
+<button id="increase-quantity" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-button hover:border-primary hover:text-primary">+</button>
+</div>
+</div>
+<div class="space-y-4">
+<button id="add-to-cart-btn" class="w-full bg-primary text-white py-3 font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition">Add to Cart</button>
+<p class="text-gray-600">This premium t-shirt is crafted from 100% organic cotton, featuring a classic fit and exceptional durability. Perfect for everyday wear, it offers both style and comfort with its breathable fabric and timeless design.</p>
+</div>
+<div id="toast-notification" class="fixed top-4 right-4 z-[60] transform translate-x-full transition-transform duration-300 bg-white rounded-lg shadow-lg max-w-md">
+<div class="p-4">
+<div class="flex items-start">
+<img id="toast-product-image" class="w-16 h-16 object-cover object-top rounded mr-4" src="" alt="Product">
+<div class="flex-1">
+<div class="flex items-start justify-between">
+<h3 class="text-gray-900 font-medium" id="toast-product-name"></h3>
+<button id="close-toast" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line"></i>
+</button>
+</div>
+<p class="text-green-600 text-sm mb-2">Item added to cart successfully</p>
+<div class="text-sm text-gray-600" id="toast-product-details"></div>
+<a href="#" class="text-primary hover:underline text-sm inline-block mt-2">View Cart</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script id="cart-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const deleteConfirmationModal = document.getElementById('delete-confirmation-modal');
+const cancelDeleteBtn = document.getElementById('cancel-delete');
+const confirmDeleteBtn = document.getElementById('confirm-delete');
+let itemToDelete = null;
+let cartCount = 2;
+const cartCountElement = document.querySelector('#cart-toggle span');
+function updateCartCount(newCount) {
+cartCount = newCount;
+cartCountElement.textContent = cartCount;
+}
+function updateSubtotal() {
+const cartItems = document.querySelectorAll('#cart-dropdown .flex.items-center.gap-4');
+let total = 0;
+cartItems.forEach(item => {
+const priceText = item.querySelector('.text-gray-900').textContent;
+const price = parseFloat(priceText.replace('NPR ', ''));
+total += price;
+});
+const subtotalElement = document.querySelector('#cart-dropdown .text-gray-900.mb-4 span:last-child');
+subtotalElement.textContent = `NPR ${total.toFixed(2)}`;
+}
+document.querySelectorAll('.delete-cart-item').forEach(button => {
+button.addEventListener('click', (e) => {
+e.stopPropagation();
+itemToDelete = button.closest('.flex.items-center.gap-4');
+deleteConfirmationModal.classList.remove('hidden');
+});
+});
+cancelDeleteBtn.addEventListener('click', () => {
+deleteConfirmationModal.classList.add('hidden');
+itemToDelete = null;
+});
+confirmDeleteBtn.addEventListener('click', () => {
+if (itemToDelete) {
+itemToDelete.remove();
+updateCartCount(cartCount - 1);
+updateSubtotal();
+deleteConfirmationModal.classList.add('hidden');
+itemToDelete = null;
+}
+});
+deleteConfirmationModal.addEventListener('click', (e) => {
+if (e.target === deleteConfirmationModal) {
+deleteConfirmationModal.classList.add('hidden');
+itemToDelete = null;
+}
+});
+});
+</script>
+<script id="header-dropdowns">
+document.addEventListener('DOMContentLoaded', function() {
+const searchToggle = document.getElementById('search-toggle');
+const searchDropdown = document.getElementById('search-dropdown');
+const profileToggle = document.getElementById('profile-toggle');
+const profileDropdown = document.getElementById('profile-dropdown');
+const cartToggle = document.getElementById('cart-toggle');
+const cartDropdown = document.getElementById('cart-dropdown');
+function closeAllDropdowns() {
+searchDropdown.classList.add('hidden');
+profileDropdown.classList.add('hidden');
+cartDropdown.classList.add('hidden');
+}
+document.addEventListener('click', function(event) {
+if (!event.target.closest('#search-toggle') &&
+!event.target.closest('#search-dropdown') &&
+!event.target.closest('#profile-toggle') &&
+!event.target.closest('#profile-dropdown') &&
+!event.target.closest('#cart-toggle') &&
+!event.target.closest('#cart-dropdown')) {
+closeAllDropdowns();
+}
+});
+searchToggle.addEventListener('click', function(e) {
+e.stopPropagation();
+closeAllDropdowns();
+searchDropdown.classList.toggle('hidden');
+});
+profileToggle.addEventListener('click', function(e) {
+e.stopPropagation();
+closeAllDropdowns();
+profileDropdown.classList.toggle('hidden');
+});
+cartToggle.addEventListener('click', function(e) {
+e.stopPropagation();
+closeAllDropdowns();
+cartDropdown.classList.toggle('hidden');
+});
+});
+</script>
+<script id="quick-view-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const modal = document.getElementById('quick-view-modal');
+const closeBtn = document.getElementById('close-modal');
+const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+const quantityInput = document.getElementById('quantity');
+const decreaseBtn = document.getElementById('decrease-quantity');
+const increaseBtn = document.getElementById('increase-quantity');
+const sizeBtns = document.querySelectorAll('.size-btn');
+const colorBtns = document.querySelectorAll('.color-btn');
+const addToCartBtn = document.getElementById('add-to-cart-btn');
+const toastNotification = document.getElementById('toast-notification');
+const closeToast = document.getElementById('close-toast');
+const cartCountElement = document.querySelector('#cart-toggle span');
+let cartCount = 2;
+function openModal(productData) {
+const modalImage = document.getElementById('modal-product-image');
+const modalTitle = document.getElementById('modal-product-title');
+const modalPrice = document.getElementById('modal-product-price');
+modalImage.src = productData.image;
+modalTitle.textContent = productData.title;
+modalPrice.textContent = productData.price;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+resetModalState();
+}
+function resetModalState() {
+quantityInput.value = '1';
+sizeBtns.forEach(btn => btn.classList.remove('border-primary', 'text-primary'));
+colorBtns.forEach(btn => btn.classList.remove('border-primary'));
+}
+quickViewBtns.forEach(btn => {
+btn.addEventListener('click', (e) => {
+e.preventDefault();
+const productCard = btn.closest('.product-card');
+const productData = {
+image: productCard.querySelector('img').src,
+title: productCard.querySelector('h3').textContent,
+price: productCard.querySelector('span').textContent
+};
+openModal(productData);
+});
+});
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+if (e.target === modal) closeModal();
+});
+decreaseBtn.addEventListener('click', () => {
+const currentValue = parseInt(quantityInput.value);
+if (currentValue > 1) {
+quantityInput.value = currentValue - 1;
+}
+});
+increaseBtn.addEventListener('click', () => {
+const currentValue = parseInt(quantityInput.value);
+quantityInput.value = currentValue + 1;
+});
+sizeBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+sizeBtns.forEach(b => b.classList.remove('border-primary', 'text-primary'));
+btn.classList.add('border-primary', 'text-primary');
+});
+});
+colorBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+colorBtns.forEach(b => b.classList.remove('border-primary'));
+btn.classList.add('border-primary');
+});
+});
+function showToast(productData) {
+const toastImage = document.getElementById('toast-product-image');
+const toastName = document.getElementById('toast-product-name');
+const toastDetails = document.getElementById('toast-product-details');
+toastImage.src = productData.image;
+toastName.textContent = productData.title;
+const selectedSize = document.querySelector('.size-btn.border-primary')?.textContent || 'Not selected';
+const selectedColor = document.querySelector('.color-btn.border-primary')?.getAttribute('data-color') || 'Not selected';
+const quantity = document.getElementById('quantity').value;
+toastDetails.textContent = `Size: ${selectedSize} | Color: ${selectedColor} | Quantity: ${quantity}`;
+toastNotification.classList.remove('translate-x-full');
+setTimeout(() => {
+toastNotification.classList.add('translate-x-full');
+}, 5000);
+}
+function updateCartCount() {
+cartCount++;
+cartCountElement.textContent = cartCount;
+}
+addToCartBtn.addEventListener('click', () => {
+const modalImage = document.getElementById('modal-product-image');
+const modalTitle = document.getElementById('modal-product-title');
+const productData = {
+image: modalImage.src,
+title: modalTitle.textContent
+};
+showToast(productData);
+updateCartCount();
+});
+closeToast.addEventListener('click', () => {
+toastNotification.classList.add('translate-x-full');
+});
+});
+</script>
+</body>
+</html>

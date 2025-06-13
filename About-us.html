@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us- Clover Clothiers</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #222;
+      }
+
+      /* Header Section */
+      .header {
+        position: relative;
+        background-image: url("https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1350&q=80");
+        /* workshop craftsperson image */
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-family: "Pacifico", cursive;
+        font-size: 3rem;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .header p {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      }
+
+      .back-link {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        user-select: none;
+      }
+
+      /* Our Story Section */
+      .our-story {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .our-story .text {
+        flex: 1;
+        padding: 1rem 2rem 1rem 0;
+        min-width: 300px;
+      }
+
+      .our-story .image {
+        flex: 1;
+        padding: 1rem 0 1rem 2rem;
+        text-align: center;
+        min-width: 300px;
+      }
+
+      .our-story img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Mission & Values Section */
+      .mission-values {
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 0 2rem;
+      }
+
+      .mission-values h2 {
+        color: #4f7942;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .mission-values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .mission-values .value {
+        background-color: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .mission-values .value img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.75rem;
+      }
+
+      .mission-values .value h3 {
+        margin: 0.5rem 0 1rem 0;
+      }
+
+      /* Meet the Team Section */
+      .team-section {
+        max-width: 1200px;
+        padding: 2rem;
+        margin: 2rem auto;
+      }
+
+      .team-section h2 {
+        color: #4f7942;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .team-member {
+        background-color: white;
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .team-member img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      .team-member h3 {
+        margin: 0.5rem 0 0.2rem 0;
+      }
+
+      .team-member p.position {
+        font-weight: 600;
+        color: #6b7280;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .team-member p.bio {
+        font-size: 0.95rem;
+        color: #374151;
+      }
+
+      /* Manufacturing Process Section */
+      .manufacturing-process {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem 2rem 3rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .manufacturing-process h2 {
+        color: #4f7942;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .process-step {
+        display: inline-block;
+        width: 280px;
+        margin-right: 1rem;
+        text-align: center;
+        vertical-align: top;
+      }
+
+      .process-step img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .process-step p {
+        margin-top: 0.5rem;
+        font-weight: 600;
+        color: #374151;
+      }
+
+      /* Customer Testimonials Section */
+      .testimonials {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonials h2 {
+        color: #4f7942;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .testimonial {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        gap: 1rem;
+      }
+
+      .testimonial img {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        color: #374151;
+        font-size: 1rem;
+      }
+
+      /* Sustainability Commitment Section */
+      .sustainability {
+        max-width: 1200px;
+        margin: 2rem auto;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .sustainability h2,
+      .cta h2 {
+        color: #4f7942;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .sustainability ul {
+        list-style: none;
+        padding-left: 0;
+        max-width: 600px;
+        margin: 0 auto;
+        color: #374151;
+        font-size: 1rem;
+      }
+
+      .sustainability ul li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .sustainability ul li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: #4F7942;
+        font-weight: bold;
+      }
+
+      /* Call to Action Section */
+      .cta {
+        background-color: #4F7942;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+
+      .cta p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+      }
+
+      .cta a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 2rem;
+        background-color: #8A9A5B;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+        user-select: none;
+      }
+
+      .cta a:hover,
+      .cta a:focus {
+        background-color: #738349;
+        outline: none;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #555;
+        font-size: 0.9rem;
+        background-color: #f0f0f0;
+        user-select: none;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .our-story {
+          flex-direction: column;
+        }
+
+        .our-story .text,
+        .our-story .image {
+          padding: 0 !important;
+          margin-bottom: 1.5rem;
+        }
+
+        .mission-values-grid {
+          grid-template-columns: 1fr !important;
+          gap: 1rem !important;
+        }
+
+        .team-grid {
+          grid-template-columns: 1fr !important;
+          gap: 1rem !important;
+        }
+
+        .manufacturing-process {
+          overflow-x: scroll;
+          white-space: nowrap;
+          padding-left: 1rem !important;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header class="header" role="banner">
+        <a href="Homepage.html" class="back-link" aria-label="Back to Home">← Back to Home</a>
+        <h1>Clover Clothiers</h1>
+        <p>Crafting Quality with Care</p>
+    </header>
+
+    <section class="our-story" aria-labelledby="our-story-title">
+        <div class="text">
+            <h2 id="our-story-title">Our Story</h2>
+            <p>
+                Founded in the heart of Kathmandu, Clover Clothiers began with a vision to create
+                high-quality, sustainable clothing that reflects the rich culture and craftsmanship
+                of Nepal. Our journey started in a small workshop, where our founders dedicated
+                themselves to perfecting the art of garment making.
+            </p>
+            <p>
+                Over the years, we have grown into a brand that values tradition, quality, and
+                sustainability. Our commitment to ethical practices ensures that every piece we create
+                is made with care for both our artisans and the environment.
+            </p>
+        </div>
+        <div class="image">
+            <img
+                src="https://images.unsplash.com/photo-1520174691706-2de01826c7c3?auto=format&fit=crop&w=800&q=80"
+                alt="Vintage style image of the first workshop"
+                loading="lazy"
+            />
+        </div>
+    </section>
+
+    <section class="mission-values" aria-label="Mission and Values">
+        <h2>Mission &amp; Values</h2>
+        <div class="mission-values-grid">
+            <div class="value" tabindex="0">
+                <img
+                    src="https://img.icons8.com/ios/50/4F7942/leaf.png"
+                    alt="Sustainability Icon"
+                    aria-hidden="true"
+                />
+                <h3>Sustainability</h3>
+                <p>We prioritize eco-friendly materials and practices to minimize our environmental impact.</p>
+            </div>
+            <div class="value" tabindex="0">
+                <img
+                    src="https://img.icons8.com/ios/50/4F7942/verified-account.png"
+                    alt="Quality Icon"
+                    aria-hidden="true"
+                />
+                <h3>Quality</h3>
+                <p>Our products are crafted with the highest standards to ensure durability and comfort.</p>
+            </div>
+            <div class="value" tabindex="0">
+                <img
+                    src="https://img.icons8.com/ios/50/4F7942/users.png"
+                    alt="Community Icon"
+                    aria-hidden="true"
+                />
+                <h3>Community</h3>
+                <p>We support local artisans and communities, fostering growth and empowerment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section" aria-labelledby="meet-team-title">
+        <h2 id="meet-team-title">Meet the Team</h2>
+        <div class="team-grid">
+            <div class="team-member" tabindex="0">
+                <img src="fav/saroj.png"
+                    alt="Saroj"
+                    loading="lazy"
+                />
+                <h3>Saroj Chhetri</h3>
+                <p class="position">Founder &amp; CEO</p>
+                <p class="bio">Saroj has over 10 years of experience in the fashion industry and is passionate about sustainable practices.</p>
+            </div>
+            <div class="team-member" tabindex="0">
+                <img
+                    src="fav/David.png"
+                    alt="David Dahal"
+                    loading="lazy"
+                />
+                <h3>David Dahal</h3>
+                <p class="position">Community Manager</p>
+                <p class="bio">David has over 5 years of experience in community management.</p>
+            </div>
+            <div class="team-member" tabindex="0">
+                <img
+                    src="fav/Aswin.png"
+                    alt="Aswin Ghimire"
+                    loading="lazy"
+                />
+                <h3>Aswin Ghimire</h3>
+                <p class="position"> Manager</p>
+                <p class="bio">Emily oversees the production process, ensuring quality and efficiency at every step.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="manufacturing-process" aria-label="Manufacturing Process">
+        <h2>Our Manufacturing Process</h2>
+        <div class="process-step" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1562158070-7198e0f8746a?auto=format&fit=crop&w=400&q=80" alt="Design phase" loading="lazy" />
+            <p>Step 1: Design</p>
+        </div>
+        <div class="process-step" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Sourcing materials" loading="lazy" />
+            <p>Step 2: Sourcing Materials</p>
+        </div>
+        <div class="process-step" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1520975692686-46d66b34f7a9?auto=format&fit=crop&w=400&q=80" alt="Production" loading="lazy" />
+            <p>Step 3: Production</p>
+        </div>
+        <div class="process-step" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=400&q=80" alt="Quality Control" loading="lazy" />
+            <p>Step 4: Quality Control</p>
+        </div>
+    </section>
+
+    <section class="testimonials" aria-label="Customer Testimonials">
+        <h2>Customer Testimonials</h2>
+        <div class="testimonial" tabindex="0">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah L." loading="lazy" />
+            <p class="testimonial-text">"Clover Clothiers has the best quality clothing! I love my new jacket!" - Sarah L.</p>
+        </div>
+        <div class="testimonial" tabindex="0">
+            <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Mark T." loading="lazy" />
+            <p class="testimonial-text">"The craftsmanship is outstanding. I highly recommend them!" - Mark T.</p>
+        </div>
+    </section>
+
+    <section class="sustainability" aria-label="Sustainability Commitment">
+        <h2>Our Sustainability Commitment</h2>
+        <p>We are committed to sustainable practices that protect our planet. Here are some of our achievements:</p>
+        <ul>
+            <li>100% organic cotton used in our products</li>
+            <li>Recycling program for old garments</li>
+            <li>Partnerships with local eco-friendly suppliers</li>
+        </ul>
+    </section>
+
+    <section class="cta" role="region" aria-label="Call to Action">
+        <h2>Shop Our Collection</h2>
+        <p>Experience the quality and craftsmanship of Clover Clothiers.</p>
+        <a href="Homepage.html" role="button">Shop Now</a>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2023 Clover Clothiers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

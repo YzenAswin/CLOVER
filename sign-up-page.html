@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account - Clover Clothiers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #222;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #4F7942;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Registration Form Styles */
+        .registration-container {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-container h1 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #4F7942;
+        }
+
+        .registration-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .form-field {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-field label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-field input[type="text"],
+        .form-field input[type="email"],
+        .form-field input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .form-field input[type="text"]:focus,
+        .form-field input[type="email"]:focus,
+        .form-field input[type="password"]:focus {
+            border-color: #4F7942;
+            outline: none;
+        }
+
+        .password-requirements {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 0.5rem;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .terms input {
+            margin-right: 0.5rem;
+        }
+
+        .register-button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4F7942;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .register-button:hover {
+            background-color: #3c6a34;
+        }
+
+        .sign-in-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #4F7942;
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 480px) {
+            .registration-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .header {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="Homepage.html">Clover Clothiers</a>
+    </header>
+
+    <div class="registration-container">
+        <h1>Create Your Account</h1>
+        <h2>Fill in the details below to register</h2>
+        <form id="registration-form">
+            <div class="form-field">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" placeholder="John Doe" required />
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required />
+                <div class="password-requirements">Must be at least 8 characters long.</div>
+            </div>
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="••••••••" required />
+            </div>
+            <div class="form-field">
+                <label for="phone">Phone Number (optional)</label>
+                <input type="text" id="phone" placeholder="01-2345678" />
+            </div>
+            <div class="terms">
+                <input type="checkbox" id="terms" required />
+                <label for="terms">I agree to the <a href="term-of-condition.html">terms and conditions</a></label>
+            </div>
+            <button type="submit" class="register-button">Register</button>
+            <a href="login.html" class="sign-in-link">Already have an account? Sign in</a>
+        </form>
+    </div>
+
+    <script>
+        // Registration form submission handling
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Registration form submitted!');
+            // Add your form submission logic here
+        });
+    </script>
+</body>
+</html>
